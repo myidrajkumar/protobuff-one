@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.rajkumar.model.list";
+
+message AddressOne {
+    int32 postbox = 1;
+    string street = 2;
+    string city = 3;
+}
+
+message CarOne {
+    string make = 1;
+    string model = 2;
+    int32 year = 3;
+}
+
+message PersonWithList {
+    string name = 1;
+    int32 age = 2;
+    AddressOne address = 3;
+    repeated CarOne car = 4;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.rajkumar.model.map";
+
+message AddressTwo {
+    int32 postbox = 1;
+    string street = 2;
+    string city = 3;
+}
+
+message CarTwo {
+    string make = 1;
+    string model = 2;
+    int32 year = 3;
+}
+
+message PersonWithMap {
+    string name = 1;
+    int32 age = 2;
+    AddressTwo address = 3;
+    repeated CarTwo car = 4;
+}
+
+message Dealer {
+    map<int32, CarTwo> model = 1;
+}
